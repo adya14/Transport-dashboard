@@ -5,6 +5,7 @@ Manufacturer or Transporter during registration.
 Landing Page (Separate for manufacturer and transporter): List out all the messages 
 received so far by showcasing order id which you can click and see the content. This 
 should have option to search depending on order_id, To and From
+
 For Manufacturer:
 The input form will have 4 input fields and one send push button: 
 1. Order ID: auto populate an Alphanumeric code (for ex: XB120)
