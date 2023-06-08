@@ -21,17 +21,3 @@ For Transporter:
 1. Order ID: List box to select the order id received from the Manufacturer.
 2. Price: input form, float value 
 3. Reply Button for sending messages back to Manufacturer.
-
-Getting Started
-Install Dynamic Portfolio Web Application with npm
-
-1: Clone the repository:
-
-  git clone <url>
-2: Install the dependencies:
-
-  npm install
-3: Start the server:
-
-  node app.js
-The application should now be running on port 3000
