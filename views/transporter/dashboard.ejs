@@ -1,0 +1,60 @@
+<%- include('../partials/header') %>
+    <link rel="stylesheet" href="/css/index.css">
+
+
+    <section>
+        <div class="main-dashboard">
+            <div class="container">
+                <h1 class="heading">Dashboard</h1>
+
+                
+                <div class="table-responsive">
+                    <table class="table table-striped ">
+                        <thead>
+                            <tr>
+                                <th scope="col">Order ID</th>
+                                <th scope="col">To</th>
+                                <th scope="col">From</th>
+                                <th scope="col">Quantity (Tons)</th>
+                                <th scope="col">Address</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% if(messages.length > 0) { %>
+                            <% messages.forEach(message=> { %>
+
+                                <tr>
+                                    <td>
+                                        <%= message.orderID%>
+                                    </td>
+                                    <td>
+                                        <%= message.to%>
+                                    </td>
+                                    <td>
+                                        <%= message.from%>
+                                    </td>
+                                    <td>
+                                        <%= message.quantity%>
+                                    </td>
+                                    <td>
+                                        <%= message.address%>
+                                    </td>
+                                    <td id="action-btn-container">
+                                        <a class="action-btn" href="/transporter/dashboard/view/<%=message._id %>"><i class="fa-solid fa-eye "></i></a>
+
+                                        <form action="/transporter/dashboard/message/delete/<%= message._id %>?_method=DELETE" method="POST">
+                                            <button type="submit" class="action-btn"><i
+                                                    class="fa-solid fa-trash "></i></button>
+                                        </form>
+                                    </td>
+                                </tr>
+                                <% }); %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <%- include('../partials/footer') %>
